@@ -1,54 +1,246 @@
 {
-  "todos": [
+  "chairs": [
     {
-      "id": "1",
-      "title": "할일1",
-      "completed": false
+      "name": "Chair 1",
+      "manufacturer": "Manufacturer A",
+      "image": "assets/chair1.png",
+      "price": 110000,
+      "id": "ABCDEF",
+      "description": "The simple design features a comfortable and ergonomic structure. Suitable for long periods of sitting with a modern aesthetic that fits most spaces.",
+      "selected": false
     },
     {
-      "id": "2",
-      "title": "할일2",
-      "completed": true
+      "name": "Chair 2",
+      "manufacturer": "Manufacturer B",
+      "image": "assets/chair2.png",
+      "price": 120000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
     },
     {
-      "id": "3",
-      "title": "할일3",
-      "completed": false
+      "name": "Chair 3",
+      "manufacturer": "Manufacturer C",
+      "image": "assets/chair3.png",
+      "price": 150000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
     },
     {
-      "id": "4",
-      "title": "1111",
-      "completed": true
+      "name": "Chair 4",
+      "manufacturer": "Manufacturer D",
+      "image": "assets/chair4.png",
+      "price": 80000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     },
     {
-      "id": "5",
-      "title": "3333",
-      "completed": true
+      "name": "Chair 5",
+      "manufacturer": "Manufacturer E",
+      "image": "assets/chair5.png",
+      "price": 110000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
     },
     {
-      "id": "6",
-      "title": "123123123",
-      "completed": false
+      "name": "Chair 6",
+      "manufacturer": "Manufacturer F",
+      "image": "assets/chair6.png",
+      "price": 130000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    }
+  ],
+  "desks": [
+    {
+      "name": "Desk 1",
+      "manufacturer": "Manufacturer G",
+      "image": "assets/desk1.png",
+      "price": 200000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     },
     {
-      "id": "7",
-      "title": "9999999",
-      "completed": true
+      "name": "Desk 2",
+      "manufacturer": "Manufacturer H",
+      "image": "assets/desk2.png",
+      "price": 180000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     },
     {
-      "id": "8",
-      "title": "123",
-      "completed": false
+      "name": "Desk 3",
+      "manufacturer": "Manufacturer I",
+      "image": "assets/desk3.png",
+      "price": 250000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     },
     {
-      "id": "0",
-      "title": "eeeee",
-      "completed": false
+      "name": "Desk 4",
+      "manufacturer": "Manufacturer J",
+      "image": "assets/desk4.png",
+      "price": 220000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    }
+  ],
+  "sofas": [
+    {
+      "name": "Sofa 1",
+      "manufacturer": "Manufacturer K",
+      "image": "assets/sofa1.png",
+      "price": 300000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     },
     {
-      "id": "0",
-      "title": "202409",
-      "completed": false
+      "name": "Sofa 2",
+      "manufacturer": "Manufacturer L",
+      "image": "assets/sofa2.png",
+      "price": 3500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Sofa 3",
+      "manufacturer": "Manufacturer M",
+      "image": "assets/sofa3.png",
+      "price": 400000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Sofa 4",
+      "manufacturer": "Manufacturer N",
+      "image": "assets/sofa4.png",
+      "price": 4500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Sofa 5",
+      "manufacturer": "Manufacturer O",
+      "image": "assets/sofa5.png",
+      "price": 500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
+    },
+    {
+      "name": "Sofa 6",
+      "manufacturer": "Manufacturer P",
+      "image": "assets/sofa6.png",
+      "price": 5500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    }
+  ],
+  "beds": [
+    {
+      "name": "Bed 1",
+      "manufacturer": "Manufacturer Q",
+      "image": "assets/bed1.png",
+      "price": 500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Bed 2",
+      "manufacturer": "Manufacturer R",
+      "image": "assets/bed2.png",
+      "price": 4500000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
+    },
+    {
+      "name": "Bed 3",
+      "manufacturer": "Manufacturer S",
+      "image": "assets/bed3.png",
+      "price": 600000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Bed 4",
+      "manufacturer": "Manufacturer T",
+      "image": "assets/bed4.png",
+      "price": 550000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    }
+  ],
+  "tables": [
+    {
+      "name": "Table 1",
+      "manufacturer": "Manufacturer U",
+      "image": "assets/table1.png",
+      "price": 400000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Table 2",
+      "manufacturer": "Manufacturer V",
+      "image": "assets/table2.png",
+      "price": 420000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Table 3",
+      "manufacturer": "Manufacturer W",
+      "image": "assets/table3.png",
+      "price": 450000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
+    },
+    {
+      "name": "Table 4",
+      "manufacturer": "Manufacturer X",
+      "image": "assets/table4.png",
+      "price": 4800000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
+    },
+    {
+      "name": "Table 5",
+      "manufacturer": "Manufacturer Y",
+      "image": "assets/table5.png",
+      "price": 5000000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": true
+    },
+    {
+      "name": "Table 6",
+      "manufacturer": "Manufacturer Z",
+      "image": "assets/table6.png",
+      "price": 53000000,
+      "id": "ABCDEF",
+      "description": "A stylish modern design that suits any interior. Available in various color options to match personal preferences.",
+      "selected": false
     }
   ]
 }

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
-/**
- * 
+/*
 Todo 클래스가 정의되어 있습니다. 이 클래스는 ToDo 항목을 나타내며, ToDo 항목의 ID, 제목, 완료 여부를 저장합니다.
 
 Todo 클래스는 다음과 같은 필드와 메서드를 가지고 있습니다.
@@ -12,34 +11,54 @@ completed: ToDo 항목이 완료되었는지 여부를 나타내는 부울 필�
 Todo() 생성자: id, title, completed 필드를 초기화하는 생성자입니다.
 Todo.fromJson() 팩토리 생성자: JSON 문자열에서 Todo 객체를 만드는 메서드입니다. JSON 문자열을 파싱하여 id, title, completed 필드를 초기화합니다.
 toJson() 메서드: Todo 객체를 JSON 형식으로 변환하는 메서드입니다. 반환값은 Map<String, dynamic> 형식이며, id, title, completed 필드를 가지고 있습니다. 이 메서드는 HTTP 요청에서 Todo 객체를 전송하기 위해 사용됩니다.
+
  */
-class Todo {
-  final String id; // Todo 항목의 고유 ID
-  final String title; // Todo 항목의 제목
-  final bool completed; // Todo 항목이 완료되었는지 여부
+
+
+class Products {
+  final String name; 
+  final String manufacturer;
+  final String image;
+  final int price;
+  final String id;
+  final String description;
+  final bool selected;
+
 
   // 생성자
-  Todo({
+  Products({
+    required this.name,
+    required this.manufacturer,
+    required this.image,
+    required this.price,
     required this.id,
-    required this.title,
-    required this.completed,
+    required this.description,
+    required this.selected
   });
 
-  // JSON에서 Todo 객체를 만드는 생성자
-  factory Todo.fromJson(Map<String, dynamic> json) {
-    return Todo(
+  // JSON에서 Products 객체를 만드는 생성자
+  factory Products.fromJson(Map<String, dynamic> json) {
+    return Products(
+      name: json['name'] as String,
+      manufacturer: json['manufacturer'] as String,
+      image: json['image'] as String,
+      price: json['price'] as int,
       id: json['id'] as String,
-      title: json['title'] as String,
-      completed: json['completed'] as bool,
+      description: json['description'] as String,
+      selected: json['selected'] as bool,
     );
   }
 
-  // Todo 객체를 JSON으로 변환하는 메서드
+  // Products 객체를 JSON으로 변환하는 메서드
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
-      'title': title,
-      'completed': completed,
+      'name': name,
+      'manufacturer': manufacturer, 
+      'image': image, 
+      'price': price, 
+      'id': id, 
+      'description': description, 
+      'selected': selected,
     };
   }
 }

@@ -12,7 +12,7 @@ class TodoListScreen extends StatefulWidget {
 
 class _TodoListScreenState extends State<TodoListScreen> {
   updateListUI() {
-    setState((() => {}));
+    setState(() {});
     print("updateListUI");
   }
 
@@ -20,9 +20,9 @@ class _TodoListScreenState extends State<TodoListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo List'),
+        title: Text('Products'),
       ),
-      body: FutureBuilder<List<Todo>>(
+      body: FutureBuilder<List<Products>>(
         future: TodoService.getTodos(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
@@ -31,21 +31,43 @@ class _TodoListScreenState extends State<TodoListScreen> {
               itemCount: todos.length,
               itemBuilder: (context, index) {
                 final todo = todos[index];
-                return ListTile(
-                  title: Text(todo.title),
-                  trailing: Checkbox(
-                    value: todo.completed,
-                    onChanged: (value) {
-                      // TODO : update todo
-                      print('update');
-                      TodoService.updateTodo(
-                        Todo(
-                          id: todo.id,
-                          title: todo.title,
-                          completed: value!,
-                        ),
-                      );
-                    },
+                return Card(
+                  margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.all(16.0),
+                    title: Text(todo.name, style: TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Manufacturer: ${todo.manufacturer}'),
+                        Text('Price: \$${todo.price}'),
+                        Text('Description: ${todo.description}'),
+                        Text('ID: ${todo.id}'),
+                      ],
+                    ),
+                    leading: todo.image.isNotEmpty
+                        ? Image.network(todo.image, width: 50, height: 50, fit: BoxFit.cover)
+                        : Icon(Icons.image, size: 50),
+                    trailing: Checkbox(
+                      value: todo.selected,
+                      onChanged: (value) {
+                        setState(() {
+                          // Create a new instance of the Products class with the updated selected value
+                          final updatedTodo = Products(
+                            id: todo.id,
+                            name: todo.name,
+                            manufacturer: todo.manufacturer,
+                            image: todo.image,
+                            price: todo.price,
+                            description: todo.description,
+                            selected: value ?? false,
+                          );
+                          // Update the product in the database
+                          TodoService.updateTodo(updatedTodo);
+                        });
+                      },
+                    ),
+
                   ),
                 );
               },
@@ -61,7 +83,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
         child: Icon(Icons.add),
         onPressed: () {
           print('add');
-          // move to page add TodoAddscreen
           Navigator.push(
             context,
             MaterialPageRoute(
